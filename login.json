@@ -1,12 +1,26 @@
 {
     "login": [
         {
-            "email": "teste@teste.com",
-            "password": "123"
+            "email": "rodrigo@gmail.com",
+            "password": "123456",
+            "first_access": "true",
+            "active": "true",
+            "admin": "false"
         },
         {
-            "email": "teste2@teste.com",
-            "password": "456"
+            "email": "rodrigo2@gmail.com",
+            "password": "123456",
+            "first_access": "false",
+            "active": "true",
+            "admin": "false"
+        },
+        {
+            "email": "rodrigo3@gmail.com",
+            "password": "123456"
+        },
+        {
+            "email": "rodrigo5@gmail.com",
+            "password": "123456"
         }
     ]
 }
