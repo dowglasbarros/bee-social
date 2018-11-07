@@ -14,6 +14,9 @@ import { TimelineCreatePostComponent } from './timeline-create-post/timeline-cre
 import { TimelineAlertBoxComponent } from './timeline-alert-box/timeline-alert-box.component';
 import { TimelineListPostsComponent } from './timeline-list-posts/timeline-list-posts.component';
 
+import { ReactiveFormsModule } from '@angular/forms'
+import { CommonModule } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +32,10 @@ import { TimelineListPostsComponent } from './timeline-list-posts/timeline-list-
     TimelineListPostsComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
