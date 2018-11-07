@@ -1,8 +1,9 @@
-<!-- Alert Box -->
-<section class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-margin">
-  <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
-    <i class="fa fa-remove"></i>
-  </span>
-  <h5><strong>Avanade alert!</strong></h5>
-  <p>Dispensados do trabalho hoje.</p>
+<section class="alert-box">
+  <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-margin" *ngFor="let alert of alerts; let i = index" id="alert{{i}}"> 
+    <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+      <i class="fa fa-remove"></i>
+    </span>
+    <h5><strong>{{alert.from}} alert!</strong></h5>
+    <p>{{alert.description}}</p>
+  </div>
 </section>

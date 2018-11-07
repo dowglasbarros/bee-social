@@ -33,11 +33,8 @@
         <span>Meus grupos</span>
       </button>
       <div id="my-groups" class="w3-hide w3-container">
-        <ul>
-          <li>Moradia</li>
-          <li>Transporte</li>
-          <li>Estudos</li>
-          <li>Alimentação</li>
+        <ul class="groups" >
+          <li id="group{{i}}" class="groups__list" *ngFor="let group of groups; let i = index">{{group.name}}</li>
         </ul>
       </div>
       <button (click)="showPhotos()" class="w3-button w3-block w3-theme-l1 w3-left-align">
@@ -45,25 +42,10 @@
         <span>Minhas fotos</span>
       </button>
       <div id="my-pictures" class="w3-hide w3-container">
+        <br>
         <div class="w3-row-padding">
-          <br>
-          <div class="w3-half">
-            <img src="assets/images/lights.jpg" class="w3-margin-bottom post-image">
-          </div>
-          <div class="w3-half">
-            <img src="assets/images/nature.jpg" class="w3-margin-bottom post-image">
-          </div>
-          <div class="w3-half">
-            <img src="assets/images/mountains.jpg" class="w3-margin-bottom post-image">
-          </div>
-          <div class="w3-half">
-            <img src="assets/images/forest.jpg" class="w3-margin-bottom post-image">
-          </div>
-          <div class="w3-half">
-            <img src="assets/images/nature.jpg" class="w3-margin-bottom post-image">
-          </div>
-          <div class="w3-half">
-            <img src="assets/images/snow.jpg" class="w3-margin-bottom post-image">
+          <div id="photo{{i}}" class="w3-half" *ngFor="let photo of photos; let i = index">
+            <img src={{photo.src}} class="w3-margin-bottom post-image" alt={{photo.alt}}>
           </div>
         </div>
       </div>
