@@ -13,6 +13,7 @@ import { TimelineProfileComponent } from './timeline-profile/timeline-profile.co
 import { TimelineCreatePostComponent } from './timeline-create-post/timeline-create-post.component';
 import { TimelineAlertBoxComponent } from './timeline-alert-box/timeline-alert-box.component';
 import { TimelineListPostsComponent } from './timeline-list-posts/timeline-list-posts.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TimelineListPostsComponent } from './timeline-list-posts/timeline-list-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
