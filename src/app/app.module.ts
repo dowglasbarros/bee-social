@@ -9,11 +9,11 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { FooterComponent } from './footer/footer.component';
 import { TimelineProfileComponent } from './timeline/timeline-profile/timeline-profile.component';
 import { TimelineCreatePostComponent } from './timeline/timeline-create-post/timeline-create-post.component';
-import { TimelineListPostsComponent } from './timeline/timeline-list-posts/timeline-list-posts.component';
-import { FooterComponent } from './footer/footer.component';
 import { TimelineAlertBoxComponent } from './timeline/timeline-alert-box/timeline-alert-box.component';
+import { TimelineListPostsComponent } from './timeline/timeline-list-posts/timeline-list-posts.component';
 
 @NgModule({
   declarations: [

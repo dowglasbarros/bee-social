@@ -1,16 +1,35 @@
-<header>
+<header class="header">
+  <nav class="header-nav">
+    <section class="header-nav-left">
+        <a routerLink="" class="header-nav-left__logo">
+          <h1>Bee Social by Avanade</h1>
+        </a>
+    </section>
+    <section class="header-nav-right">
+      <div class="header-nav-right__user">
+        <a routerLink="/timeline">
+          <img src="assets/images/avatar3.png"  alt="User Picture">
+          <div class="header-nav-right__user--submenu submenu">
+              <a routerLink="">Sair</a>
+          </div>
+        </a>
+      </div>
+    </section>
+  </nav>
+
+
   <!-- Navbar -->
-  <div class="w3-top" >
+  <!-- <div class="w3-top header" >
     <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" (click)="openNav()">
         <i class="fa fa-bars"></i>
       </a>
-      <a href="/" class="w3-bar-item w3-button w3-padding-large w3-theme-d4">
-        <i class="fa fa-home w3-margin-right"></i>
-        <span>Rede social</span>
+      <a href="/" class="header-logo w3-bar-item w3-button w3-padding-large w3-theme-d4">
+        <span>Bee Social by Avanade</span>
       </a>
       <a href="/timeline" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Timeline">
-        <i class="fa fa-globe"></i>
+        <i class="fa fa-globe w3-margin-right"></i>
+        <span>Meu perfil</span>
       </a>
       <a href="/minha-conta" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Editar conta">
         <i class="fa fa-user"></i>
@@ -25,11 +44,11 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
    
   <!-- Navbar on small screens -->
-  <div id="navMenu" class="nav-menu w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <!-- <div id="navMenu" class="nav-menu w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="/timeline" class="w3-bar-item w3-button w3-padding-large">Timeline</a>
     <a href="/logout" class="w3-bar-item w3-button w3-padding-large">Sair</a>
-  </div>
+  </div> -->
 </header>

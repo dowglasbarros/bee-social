@@ -15,16 +15,20 @@ const routes: Routes = [
     component: UserEditComponent
   },
   {
-    path: 'timeline', component: TimelineComponent
+    path: 'timeline',
+    component: TimelineComponent
   },
   {
-    path: 'login', component: LoginComponent
+    path: 'login',
+    component: LoginComponent
   },
   {
-    path: 'cadastrar', component: RegisterComponent
+    path: 'cadastrar',
+    component: RegisterComponent
   },
   {
-    path: '**', redirectTo: 'timeline'
+    path: '**',
+    redirectTo: 'timeline'
   }
 ];
 
