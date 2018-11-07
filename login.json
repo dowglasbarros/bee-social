@@ -5,22 +5,26 @@
             "password": "123456",
             "first_access": "true",
             "active": "true",
-            "admin": "false"
+            "admin": "false",
+            "id": 1
         },
         {
             "email": "rodrigo2@gmail.com",
             "password": "123456",
             "first_access": "false",
             "active": "true",
-            "admin": "false"
+            "admin": "false",
+            "id":2
         },
         {
             "email": "rodrigo3@gmail.com",
-            "password": "123456"
+            "password": "123456",
+            "id":3
         },
         {
             "email": "rodrigo5@gmail.com",
-            "password": "123456"
+            "password": "123456",
+            "id":4
         }
     ]
 }
