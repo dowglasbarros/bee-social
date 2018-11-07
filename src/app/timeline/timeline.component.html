@@ -1,0 +1,111 @@
+   <!-- Page Container -->
+   <div class="w3-container w3-content content-page">    
+     <!-- The Grid -->
+     <div class="w3-row">
+       <!-- Left Column -->
+       <div class="w3-col m3">
+         <!-- Profile -->
+         <div class="w3-card w3-round w3-white">
+           <div class="w3-container">
+            <p class="w3-center"><img src="assets/images/avatar3.png" class="w3-circle profile-picture" alt="Avatar"></p>
+            <hr>
+            <p>
+              <i class="fa fa-user fa-fw w3-margin-right w3-text-theme"></i>
+              <span>exemplo@exemplo.com</span>
+            </p>
+           </div>
+         </div>
+         <br>
+         
+         <!-- Accordion -->
+         <div class="w3-card w3-round">
+           <div class="w3-white">
+             <button (click)="showPhotos()" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-camera fa-fw w3-margin-right"></i> Minhas fotos</button>
+             <div id="my-pictures" class="w3-hide w3-container">
+            <div class="w3-row-padding">
+            <br>
+              <div class="w3-half">
+                <img src="assets/images/lights.jpg" class="w3-margin-bottom post-image">
+              </div>
+              <div class="w3-half">
+                <img src="assets/images/nature.jpg" class="w3-margin-bottom post-image">
+              </div>
+              <div class="w3-half">
+                <img src="assets/images/mountains.jpg" class="w3-margin-bottom post-image">
+              </div>
+              <div class="w3-half">
+                <img src="assets/images/forest.jpg" class="w3-margin-bottom post-image">
+              </div>
+              <div class="w3-half">
+                <img src="assets/images/nature.jpg" class="w3-margin-bottom post-image">
+              </div>
+              <div class="w3-half">
+                <img src="assets/images/snow.jpg" class="w3-margin-bottom post-image">
+              </div>
+            </div>
+             </div>
+           </div>      
+         </div>
+         <br>
+       
+       <!-- End Left Column -->
+       </div>
+       
+       <!-- Right Column -->
+       <div class="w3-col m9">       
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+              <div class="w3-container w3-padding">
+                <h6 class="w3-opacity">Rede Social</h6>
+                <input type="text" class="w3-border w3-padding input-page" placeholder="Status">
+                <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+              </div>
+            </div>
+          </div>
+          </div>
+        <div class="w3-container w3-card w3-white w3-round w3-margin" *ngFor="let post of posts">
+            <br>
+           <img src={{post.avatarPicture}} alt="Avatar" class="w3-left w3-circle w3-margin-right timeline-photo">
+           <h4>{{post.avatarName}}</h4><br>
+           <hr class="w3-clear">
+           <p>{{post.description}}</p>
+            <div class="w3-row-padding">
+               <div class="w3-half" *ngFor="let picture of post.pictures">
+                 <img src={{picture.src}} alt={{picture.alt}} class="w3-margin-bottom post-image">
+               </div>
+           </div>
+           <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">
+             <i class="fa fa-thumbs-up"></i>
+             <span class="like"> Like</span>
+            </button>
+            <div class="amount-likes">
+              <span class="number-likes">{{post.likes}} </span>
+              <span>likes</span>
+            </div>
+         </div>  
+   
+         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+           <img src="" alt="Avatar" class="w3-left w3-circle w3-margin-right timeline-photo">
+           <h4></h4><br>
+           <hr class="w3-clear">
+           <p></p>
+           <img src="" class="w3-margin-bottom post-image">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+           <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+         </div> 
+       <!-- End Right Column -->
+       </div> 
+     <!-- End Grid -->
+     </div>
+   <!-- End Page Container -->
+   </div>
+   <br>
+   
+   <!-- Footer -->
+   <footer class="w3-container w3-theme-d3 w3-padding-16">
+     <h5>Footer</h5>
+   </footer>
+  
+
+  
