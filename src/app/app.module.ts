@@ -9,6 +9,10 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { TimelineProfileComponent } from './timeline-profile/timeline-profile.component';
+import { TimelineCreatePostComponent } from './timeline-create-post/timeline-create-post.component';
+import { TimelineAlertBoxComponent } from './timeline-alert-box/timeline-alert-box.component';
+import { TimelineListPostsComponent } from './timeline-list-posts/timeline-list-posts.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { RegisterComponent } from './register/register.component';
     TimelineComponent,
     LoginComponent,
     RegisterComponent,
+    TimelineProfileComponent,
+    TimelineCreatePostComponent,
+    TimelineAlertBoxComponent,
+    TimelineListPostsComponent
   ],
   imports: [
     BrowserModule,
