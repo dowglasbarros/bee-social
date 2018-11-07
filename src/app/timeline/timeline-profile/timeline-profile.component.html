@@ -1,0 +1,73 @@
+<div class="w3-col m3 w3-margin-bottom">
+  <!-- Profile -->
+  <section class="w3-card w3-round w3-white">
+    <div class="w3-container">
+      <h4 class="w3-center">Nome do funcionário</h4>
+      <p class="w3-center"><img src="assets/images/avatar3.png" class="w3-circle profile-picture" alt="Avatar"></p>
+      <hr>
+      <p>
+        <i class="fa fa-user fa-fw w3-margin-right w3-text-theme"></i>
+        <span>exemplo@exemplo.com</span>
+      </p>
+      <p>
+        <i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>
+        <span>Programador senior</span>
+      </p>
+      <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>
+        <span>São Paulo/SP</span>
+      </p>
+      <p>
+        <i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>
+        <span>15 de Novembro de 1988</span>
+      </p>
+    </div>
+  </section>
+
+  <br>
+
+  <!-- Accordion -->
+  <section class="w3-card w3-round">
+    <div class="w3-white">
+      <button (click)="showTextMenu()" class="w3-button w3-block w3-theme-l1 w3-left-align">
+        <i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>
+        <span>Meus grupos</span>
+      </button>
+      <div id="my-groups" class="w3-hide w3-container">
+        <ul>
+          <li>Moradia</li>
+          <li>Transporte</li>
+          <li>Estudos</li>
+          <li>Alimentação</li>
+        </ul>
+      </div>
+      <button (click)="showPhotos()" class="w3-button w3-block w3-theme-l1 w3-left-align">
+        <i class="fa fa-camera fa-fw w3-margin-right"></i>
+        <span>Minhas fotos</span>
+      </button>
+      <div id="my-pictures" class="w3-hide w3-container">
+        <div class="w3-row-padding">
+          <br>
+          <div class="w3-half">
+            <img src="assets/images/lights.jpg" class="w3-margin-bottom post-image">
+          </div>
+          <div class="w3-half">
+            <img src="assets/images/nature.jpg" class="w3-margin-bottom post-image">
+          </div>
+          <div class="w3-half">
+            <img src="assets/images/mountains.jpg" class="w3-margin-bottom post-image">
+          </div>
+          <div class="w3-half">
+            <img src="assets/images/forest.jpg" class="w3-margin-bottom post-image">
+          </div>
+          <div class="w3-half">
+            <img src="assets/images/nature.jpg" class="w3-margin-bottom post-image">
+          </div>
+          <div class="w3-half">
+            <img src="assets/images/snow.jpg" class="w3-margin-bottom post-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Left Column -->
+</div>
