@@ -78,27 +78,27 @@ export class TimelineProfileComponent implements OnInit {
   }
 
   showTextMenu() {
-    var x = document.getElementById("my-groups");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-      x.previousElementSibling.className += " w3-theme-d1";
+    var myGroups = document.getElementById("my-groups");
+    if (myGroups.className.indexOf("w3-show") == -1) {
+      myGroups.className += " w3-show";
+      myGroups.previousElementSibling.className += " w3-theme-d1";
     } else {
-      x.className = x.className.replace("w3-show", "");
-      x.previousElementSibling.className =
-        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+      myGroups.className = myGroups.className.replace("w3-show", "");
+      myGroups.previousElementSibling.className =
+        myGroups.previousElementSibling.className.replace(" w3-theme-d1", "");
     }
   }
 
   showPhotos() {
-    var x = document.getElementById("my-pictures");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-      x.previousElementSibling.className += " w3-theme-d1";
+    var myPictures = document.getElementById("my-pictures");
+    if (myPictures.className.indexOf("w3-show") == -1) {
+      myPictures.className += " w3-show";
+      myPictures.previousElementSibling.className += " w3-theme-d1";
     }
     else {
-      x.className = x.className.replace("w3-show", "");
-      x.previousElementSibling.className =
-        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+      myPictures.className = myPictures.className.replace("w3-show", "");
+      myPictures.previousElementSibling.className =
+        myPictures.previousElementSibling.className.replace(" w3-theme-d1", "");
     }
   }
 
