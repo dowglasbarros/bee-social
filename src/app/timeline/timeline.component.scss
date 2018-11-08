@@ -1,13 +1,14 @@
 .container-timeline{
     display: flex;
     width: 100vw;
-    height: 85vh;
+    height: auto;
+    min-height: 85vh;
     margin-top: 10vh;
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
     @media screen and (max-width: 768px){
-     height: auto;           
+      height: auto;           
     }
     &--wrapper{
         display: flex;
