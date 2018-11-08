@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
+import { PostService } from '../../post.service';
 import { Router } from '@angular/router';
 import { EventEmitter } from '@angular/core';
-import { EventEmitterService } from '../event-emitter.service';
+import { EventEmitterService } from '../../event-emitter.service';
 
 @Component({
   selector: 'app-timeline-create-post',

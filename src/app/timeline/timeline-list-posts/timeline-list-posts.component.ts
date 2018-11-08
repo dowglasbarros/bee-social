@@ -1,8 +1,8 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
-import { PostService } from '../post.service';
+import { PostService } from '../../post.service';
 import { Observable } from 'rxjs';
 import { TimelineCreatePostComponent } from '../timeline-create-post/timeline-create-post.component';
-import { EventEmitterService } from '../event-emitter.service';
+import { EventEmitterService } from '../../event-emitter.service';
 
 
 @Component({

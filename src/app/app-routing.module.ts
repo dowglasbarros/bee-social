@@ -5,7 +5,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { TimelineListPostsComponent } from './timeline-list-posts/timeline-list-posts.component';
+import { TimelineListPostsComponent } from './timeline/timeline-list-posts/timeline-list-posts.component';
 
 const routes: Routes = [
   {
