@@ -1,10 +1,11 @@
 .header{
-    position: relative;
+    position: fixed;
     display: flex;
+    width: 100vw;
     height: 10vh;
     background: #de5814;
     padding: 0 20px;
-    box-shadow: 0px 3px 6px 0px #8c8987eb;
+    box-shadow: 0px 1px 6px 0px #b1b1b1eb;
     &-nav{
         display: flex;
         width: 100%;
@@ -18,7 +19,7 @@
                 align-items: center;
                 h1{
                     display: flex;
-                    width: 100%;
+                    width: 135px;
                     height: 8vh;
                     font-size: 0;
                     background: url(../../assets/images/logo.png) no-repeat center;

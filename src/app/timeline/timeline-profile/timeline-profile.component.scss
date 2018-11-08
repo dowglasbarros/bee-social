@@ -4,3 +4,35 @@
         list-style: none;
     }
 }
+
+.profile{
+    &-card{
+        background: #0d273e;
+        color: #fff;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+        border-radius: 4px;
+        &-container{
+            padding: 20px;
+            h4{
+                text-align: center;
+            }
+            .profile-card-picture{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                img{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                }
+            }
+            .profile-card-detail{
+                i{
+                    margin-right: 10px;
+                    color: #fff;
+                }
+            }
+
+        }
+    }
+}

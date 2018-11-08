@@ -1,14 +1,22 @@
 <!-- Page Container -->
-<div class="">
+<div class="container-timeline">
   <!-- The Grid -->
-  <div class="">
+  <div class="container-timeline--wrapper">
     <!-- Left Column -->
-    <app-timeline-profile></app-timeline-profile>
+    <div class="container-timeline--wrapper__left">
+      <app-timeline-profile></app-timeline-profile>
+    </div>
     <!-- Right Column -->
-    <div class="w3-col m9">
-      <app-timeline-create-post></app-timeline-create-post>
-      <app-timeline-alert-box></app-timeline-alert-box>
-      <app-timeline-list-posts></app-timeline-list-posts>
+    <div class="container-timeline--wrapper__right">
+      <div class="container-timeline--createpost">
+        <app-timeline-create-post></app-timeline-create-post>
+      </div>
+      <div class="container-timeline--alert">
+        <app-timeline-alert-box></app-timeline-alert-box>
+      </div>
+      <div class="container-timeline--poststimeline">
+        <app-timeline-list-posts></app-timeline-list-posts>
+      </div>
       <!-- End Right Column -->
     </div>
     <!-- End Grid -->

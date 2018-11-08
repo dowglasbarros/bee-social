@@ -1,23 +1,26 @@
-<div class="w3-col m3 w3-margin-bottom">
+<div class="profile">
   <!-- Profile -->
-  <section class="w3-card w3-round w3-white">
-    <div class="w3-container">
-      <h4 class="w3-center">{{user.name}}</h4>
-      <p class="w3-center"><img src={{user.photo}} class="w3-circle profile-picture" alt="User's avatar"></p>
+  <section class="profile-card">
+    <div class="profile-card-container">
+      <h4>{{user.name}}</h4>
+      <p class="profile-card-picture">
+        <img src={{user.photo}} alt="User's image">
+      </p>
       <hr>
-      <p>
-        <i class="fa fa-user fa-fw w3-margin-right w3-text-theme"></i>
+      <p class="profile-card-detail">
+        <i class="fa fa-user fa-fw"></i>
         <span>{{user.email}}</span>
       </p>
-      <p>
-        <i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>
+      <p class="profile-card-detail">
+        <i class="fa fa-pencil fa-fw"></i>
         <span>{{user.ocupation}}</span>
       </p>
-      <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>
+      <p class="profile-card-detail">
+        <i class="fa fa-home fa-fw"></i>
         <span>{{user.location}}</span>
       </p>
-      <p>
-        <i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>
+      <p class="profile-card-detail">
+        <i class="fa fa-birthday-cake fa-fw"></i>
         <span>{{user.birthday}}</span>
       </p>
     </div>
