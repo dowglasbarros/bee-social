@@ -12,19 +12,11 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  login: Login[] = [];//consumo json
+  loginData: Login[] = [];//consumo json
 
   constructor(private formBuilder: FormBuilder,
     private authService: AuthService,
-    private router: Router) { 
-
-      /*parte json */
-      authService.getAllJson().subscribe((login) => {
-        this.login = login;
-        console.log(login[0].first_access);
-        router.navigateByUrl(`user/${login[0].id}/edit`)     
-       });      
-    }
+    private router: Router) {}
 
  
   ngOnInit() {
@@ -33,7 +25,14 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required]
     })   
   }
-  
+        /*parte json */
+        login(){
+          this.authService.getAllJson().subscribe((loginData) => {
+            this.loginData = loginData;
+            console.log(loginData[0].first_access);
+            this.router.navigateByUrl(`user/${loginData[0].id}/edit`)     
+           });   
+          }  
   /*consume api*/
   // login(){
   //   const emailLogin = this.loginForm.get('email').value;
