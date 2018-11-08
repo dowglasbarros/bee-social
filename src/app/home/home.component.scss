@@ -41,16 +41,17 @@
             border-radius: 10px;
             padding: 20px;
             transition: .4s linear;
-            background: #de5814cc;
+            background: #de5814;
+            opacity: .5;
             &:hover{
-                background: #de5814;
                 transition: .4s linear;
+                opacity: 1;
             }
             h6{
                 font-size: 2rem;
                 text-transform: uppercase;
                 font-weight: bold;
-                color: #404040;
+                color: #0d273e;
             }
         }
         &--inputs{
