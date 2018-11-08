@@ -1,0 +1,21 @@
+.input-items{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    label{
+        margin-bottom: 0;
+    }
+    input{
+        width: 50%;
+        margin: 15px;
+    }
+}
+.input-submit{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

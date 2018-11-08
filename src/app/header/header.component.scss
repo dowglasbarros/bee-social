@@ -1,8 +1,88 @@
-.header-profile-picture{
-    height: 23px;
-    width: 23px; 
+.header{
+    position: relative;
+    display: flex;
+    height: 80px;
+    background: #de5814;
+    padding: 0 20px;
+    box-shadow: 0px 3px 6px 0px #8c8987eb;
+    &-nav{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        &-left{
+            display: inline-flex;
+            &__logo{
+                display: inline-flex;
+                width: 200px;
+                height: 100%;
+                align-items: center;
+                h1{
+                    display: flex;
+                    width: 100%;
+                    height: 60px;
+                    font-size: 0;
+                    background: url(../../assets/images/logo.png) no-repeat center;
+                    background-size: contain;
+                    margin: 0;
+                }
+            }
+        }
+        &-right{
+            display: inline-flex;
+            &__user{
+                a{
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100px;
+                    height: 100%;
+                    font-weight: bold;
+                    letter-spacing: .1rem;
+                    img{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                    }
+                    .submenu{
+                        display: none;
+                        position: absolute;
+                        bottom: -38px;
+                        width: 100px;
+                        text-align: center;
+                        padding: 8px 0;
+                        background: #de5814e3;
+                        color: #fff;
+                        box-shadow: -1px 2px 4px 0px #8a8a8a;                 
+                    
+                        a:hover{
+                            text-decoration: none;                            
+                            color: #3e3e3e;
+                        }
+                    }
+                    &:hover{
+                        img{
+                            border: 1px solid #6c757d;
+                            box-shadow: 0px 0px 20px 2px #6c757d;
+                        }
+                        .submenu{
+                            display: block;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
 }
 
-.nav-menu{
-    margin-top: 50px;
-}
+// .header-profile-picture{
+//     height: 23px;
+//     width: 23px; 
+// }
+// .header-dropdown{
+//     width: 300px;
+//     right: 0;
+// }
+// .nav-menu{
+//     margin-top: 50px;
+// }

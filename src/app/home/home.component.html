@@ -1,15 +1,19 @@
-<div class="content-page">
-  <div class="w3-container w3-padding">
-    <h6 class="w3-opacity">Bem vindo a Rede social!</h6>
-    <p class="w3-opacity">Faça:</p>
+<main class="content-page">
+  <div class="content-page__image">
+    <canvas id="canvas"></canvas>
   </div>
-  <div class="login-home">
-    <app-login></app-login> 
+  <div class="content-page__login login-home ">
+    <div class="content-page__login--wrapper"> 
+      <h6>Bem vindo!</h6>
+      <div class="content-page__login--inputs">
+        <app-login></app-login> 
+      </div>
+    </div>
   </div>
-  <div class="w3-container w3-padding">
+  <!-- <div class="w3-container w3-padding">
     <p class="w3-opacity">Ou:</p>
-  </div>
-  <div class="register-home">
+  </div> -->
+  <!-- <div class="register-home">
     <app-register></app-register>
-  </div>
-</div>
+  </div> -->
+</main>
