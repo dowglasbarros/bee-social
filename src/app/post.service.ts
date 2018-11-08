@@ -20,8 +20,19 @@ export class PostService {
     return this.http.get<Post[]>(this.URL);
   }
 
-  //getPostUser
-  //getPostGroup
+  // onUpload(photo) {
+  //   const uploadData = new FormData();
+  //   uploadData.append('myFile', photo, photo.name )
+  //   return this.http.post(this.URL, uploadData)
+  // }
+
+  getPostUser(userId: number): Observable<Post[]> {
+    return this.http.get<Post[]>(this.URL); //Alterar URL para receber o parametro do userID
+  }
+
+  getPostGroup(userGroup: number): Observable<Post[]> {
+    return this.http.get<Post[]>(this.URL); //Alterar URL para receber o parametro do userGroup
+  }
 
 
 }

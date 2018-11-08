@@ -3,20 +3,18 @@
     <div class="w3-card w3-round w3-white">
       <div class="w3-container w3-padding">
         <h6 class="w3-opacity">Rede Social</h6>
-        <textarea
-          type="text"
-          class="w3-border w3-padding input-page"
-          placeholder="Status"
-          (input)="updateResponse($event)"
-        ></textarea>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">
+        <textarea type="text" class="w3-border w3-padding input-page" placeholder="Status" (input)="updateResponse($event)"></textarea>
+
+        <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+        <button (click)="fileInput.click()" class="w3-button w3-theme-d1 w3-margin-bottom">
           <i class="fa fa-image"></i>
           <span>  Inserir imagem</span>
         </button>
         <button (click)="insertPost()" type="button" class="w3-button w3-theme-d2 w3-margin-bottom btn-post">
-          <i class="fa fa-pencil"></i>  
+          <i class="fa fa-pencil"></i>
           <span>  Post</span>
         </button>
+
       </div>
     </div>
   </div>

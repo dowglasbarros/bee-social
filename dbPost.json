@@ -7,22 +7,96 @@
       "avatarPicture": "assets/images/avatar2.png",
       "description": "asdasdasda",
       "groupId": 0,
-      "pictures": {
-        "src": "assets/images/lights.jpg",
-        "alt": "Northern Lights"
-      }
+      "pictures": [
+        {
+          "src": "assets/images/lights.jpg",
+          "alt": "Northern Lights"
+        }
+      ]
     },
     {
       "id": 2,
       "userId": 0,
       "userName": "Felipe",
       "avatarPicture": "assets/images/avatar2.png",
-      "description": "asdasdasdasd",
+      "description": "testeeee",
       "groupId": 0,
-      "pictures": {
-        "src": "assets/images/lights.jpg",
-        "alt": "Northern Lights"
-      }
+      "pictures": [
+        {
+          "src": "assets/images/lights.jpg",
+          "alt": "Northern Lights"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "userId": 0,
+      "userName": "Felipe",
+      "avatarPicture": "assets/images/avatar2.png",
+      "description": "aaaaaaaaaa",
+      "groupId": 0,
+      "pictures": [
+        {
+          "src": {},
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "userId": 0,
+      "userName": "Felipe",
+      "avatarPicture": "assets/images/avatar2.png",
+      "description": "asdasdasd",
+      "groupId": 0,
+      "pictures": [
+        {
+          "src": {},
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "userId": 0,
+      "userName": "Felipe",
+      "avatarPicture": "assets/images/avatar2.png",
+      "description": "",
+      "groupId": 0,
+      "pictures": [
+        {
+          "src": "",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "userId": 0,
+      "userName": "Felipe",
+      "avatarPicture": "assets/images/avatar2.png",
+      "description": "weqeqweq",
+      "groupId": 0,
+      "pictures": [
+        {
+          "src": "",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "userId": 0,
+      "userName": "Felipe",
+      "avatarPicture": "assets/images/avatar2.png",
+      "description": "weqeqweq\n\n",
+      "groupId": 0,
+      "pictures": [
+        {
+          "src": "",
+          "alt": ""
+        }
+      ]
     }
   ]
 }

@@ -5,6 +5,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { TimelineListPostsComponent } from './timeline-list-posts/timeline-list-posts.component';
 
 const routes: Routes = [
   {
@@ -17,8 +18,10 @@ const routes: Routes = [
   {
     path: 'timeline',
     component: TimelineComponent
-  },
-  {
+  }, {
+    path: 'timeline/posts',
+    component: TimelineListPostsComponent
+  }, {
     path: 'login',
     component: LoginComponent
   },
@@ -36,6 +39,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
+export class AppRoutingModule {
 
 }

@@ -5,8 +5,8 @@ type Post = {
   groupId: number;
   avatarPicture: string;
   description: string;
-  pictures: {
+  pictures: [{
     src: string;
     alt: string;
-  }
+  }]
 }
