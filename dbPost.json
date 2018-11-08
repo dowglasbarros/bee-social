@@ -1,5 +1,28 @@
 {
   "posts": [
-
+    {
+      "id": 1,
+      "userId": 0,
+      "userName": "Felipe",
+      "avatarPicture": "assets/images/avatar2.png",
+      "description": "asdasdasda",
+      "groupId": 0,
+      "pictures": {
+        "src": "assets/images/lights.jpg",
+        "alt": "Northern Lights"
+      }
+    },
+    {
+      "id": 2,
+      "userId": 0,
+      "userName": "Felipe",
+      "avatarPicture": "assets/images/avatar2.png",
+      "description": "asdasdasdasd",
+      "groupId": 0,
+      "pictures": {
+        "src": "assets/images/lights.jpg",
+        "alt": "Northern Lights"
+      }
+    }
   ]
 }
