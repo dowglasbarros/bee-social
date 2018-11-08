@@ -1,24 +1,13 @@
-// @media (max-width: 600px){
-//     .content-page{
-//         margin-top: 50px;
-//     }
-// }
-
-// .login-home,
-// .register-home {
-//     margin-top: -80px;
-// }
-
 .content-page{
     position: relative;
     display: flex;
     width: 100vw;
-    height: 90vh;
+    height: 84vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background: #0d273e;
-    &__image{
+    &__canvas{
         position: absolute;
         display: flex;
         width: 100vw;
@@ -30,7 +19,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 60%;
+        width: 100%;
         z-index: 2;
         &--wrapper{
             display: flex;
@@ -43,23 +32,30 @@
             transition: .4s linear;
             background: #de5814;
             opacity: .5;
+            @media screen and (max-width: 768px){
+                width: 90%;
+                opacity: .8;
+            }
             &:hover{
                 transition: .4s linear;
                 opacity: 1;
             }
             h6{
-                font-size: 2rem;
+                font-size: 2.5rem;
                 text-transform: uppercase;
                 font-weight: bold;
                 color: #0d273e;
+                @media screen and (max-width: 768px){
+                    font-size: 1.5rem;
+                }
             }
         }
         &--inputs{
             display: flex;
             width: 100%;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin: 20px 0;            
         }
     }
 }
