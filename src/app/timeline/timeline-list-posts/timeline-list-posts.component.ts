@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { TimelineCreatePostComponent } from '../timeline-create-post/timeline-create-post.component';
 import { EventEmitterService } from '../../event-emitter.service';
 
-
 @Component({
   selector: 'app-timeline-list-posts',
   templateUrl: './timeline-list-posts.component.html',

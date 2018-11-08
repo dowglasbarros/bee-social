@@ -21,7 +21,8 @@ export class TimelineCreatePostComponent implements OnInit {
     pictures: [{
       src: '',
       alt: '',
-    }]
+    }],
+    likes: 0
   }
 
   public value: string = ''
@@ -59,5 +60,5 @@ export class TimelineCreatePostComponent implements OnInit {
     this.value = ((<HTMLInputElement>resp.target).value);
   }
 
-
+  
 }
