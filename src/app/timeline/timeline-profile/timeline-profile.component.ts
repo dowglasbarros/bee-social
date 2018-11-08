@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
+const USER = {
+  "name": "Nome do funcionário",
+  "photo": "assets/images/avatar3.png",
+  "email": "funcionario@avanade.com",
+  "ocupation": "Programador Senior",
+  "location": "São Paulo/SP",
+  "birthday": "15 de Novembro de 1988"
+}
+
 const GROUPS = [
   {
     "id": 1,
@@ -59,6 +68,7 @@ const PHOTOS = [
 })
 export class TimelineProfileComponent implements OnInit {
 
+  user = USER;
   photos = PHOTOS;
   groups = GROUPS;
 

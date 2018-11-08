@@ -2,23 +2,23 @@
   <!-- Profile -->
   <section class="w3-card w3-round w3-white">
     <div class="w3-container">
-      <h4 class="w3-center">Nome do funcionário</h4>
-      <p class="w3-center"><img src="assets/images/avatar3.png" class="w3-circle profile-picture" alt="Avatar"></p>
+      <h4 class="w3-center">{{user.name}}</h4>
+      <p class="w3-center"><img src={{user.photo}} class="w3-circle profile-picture" alt="User's avatar"></p>
       <hr>
       <p>
         <i class="fa fa-user fa-fw w3-margin-right w3-text-theme"></i>
-        <span>exemplo@exemplo.com</span>
+        <span>{{user.email}}</span>
       </p>
       <p>
         <i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>
-        <span>Programador senior</span>
+        <span>{{user.ocupation}}</span>
       </p>
       <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>
-        <span>São Paulo/SP</span>
+        <span>{{user.location}}</span>
       </p>
       <p>
         <i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>
-        <span>15 de Novembro de 1988</span>
+        <span>{{user.birthday}}</span>
       </p>
     </div>
   </section>
