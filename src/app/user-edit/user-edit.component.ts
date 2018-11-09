@@ -17,11 +17,39 @@ export class UserEditComponent implements OnInit {
     groups: [
       {
         groupId: 1,
-        groupName: 'Angular'
+        groupLabel: 'Angular',
+        groupName: 'angular',
+        follow: true
       },
       {
         groupId: 2,
-        groupName: 'Node.js'
+        groupLabel: 'Caronas',
+        groupName: 'caronas',
+        follow: false
+      },
+      {
+        groupId: 3,
+        groupLabel: 'Moradia',
+        groupName: 'moradia',
+        follow: false
+      },
+      {
+        groupId: 4,
+        groupLabel: 'Node.js',
+        groupName: 'nodejs',
+        follow: true
+      },
+      {
+        groupId: 5,
+        groupLabel: 'React',
+        groupName: 'react',
+        follow: true
+      },
+      {
+        groupId: 5,
+        groupLabel: 'Tecnologia',
+        groupName: 'tecnologia',
+        follow: true
       }
       ],
     password: '',
@@ -29,6 +57,12 @@ export class UserEditComponent implements OnInit {
   }
 
   userPhoto = 'assets/images/avatar3.png';
+
+  /* tratando o array de grupos */
+  groupArray = this.user.groups.filter(function(group) {
+    return group.follow;
+  });
+  groupLabels = this.groupArray.map(group => group.groupLabel).join(', ');
 
   constructor() { }
 

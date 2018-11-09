@@ -30,9 +30,9 @@
             <i class="fa fa-line-chart fa-fw w3-margin-right w3-text-theme"></i>
             <span>{{user.project}}</span>
           </p>
-          <p>
+          <p *ngIf="groupLabels">
             <i class="fa fa-group fa-fw w3-margin-right w3-text-theme"></i>
-            <span>{{user.groups}}</span>
+            <span>{{groupLabels}}</span>
           </p>
         </div>
       </section>
@@ -58,7 +58,7 @@
                               type="text"
                               class="form-control"
                               id="name"
-                              name="user.name"
+                              name="name"
                               placeholder="Digite o seu nome"
                               [(ngModel)]="user.name"
                             >
@@ -69,7 +69,7 @@
                               type="email"
                               class="form-control"
                               id="mail"
-                              name="user.mail"
+                              name="mail"
                               placeholder="Digite o seu e-mail"
                               [(ngModel)]="user.mail"
                             >
@@ -82,7 +82,7 @@
                               type="text"
                               class="form-control"
                               id="position"
-                              name="user.position"
+                              name="position"
                               placeholder="Digite o seu cargo"
                               [(ngModel)]="user.position"
                             >
@@ -93,7 +93,7 @@
                               type="text"
                               class="form-control"
                               id="city"
-                              name="user.city"
+                              name="city"
                               placeholder="Digite a cidade que mora"
                               [(ngModel)]="user.city"
                             >
@@ -106,7 +106,7 @@
                               type="text"
                               class="form-control"
                               id="company"
-                              name="user.company"
+                              name="company"
                               placeholder="Digite a cidade que trabalha"
                               [(ngModel)]="user.cityWork"
                             >
@@ -117,7 +117,7 @@
                               type="text"
                               class="form-control"
                               id="project"
-                              name="user.project"
+                              name="project"
                               placeholder="Digite o projeto que trabalha"
                               [(ngModel)]="user.project"
                             >
@@ -125,29 +125,16 @@
                         </div>
                         <div class="form-group">
                           <p>Escolha as colméias do seu interesse</p>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="angularCheckbox" value="angular">
-                            <label class="form-check-label" for="">Angular</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="rideCheckbox" value="ride">
-                            <label class="form-check-label" for="">Caronas</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="rentCheckbox" value="rent">
-                            <label class="form-check-label" for="">Moradia</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="nodejsCheckbox" value="nodejs">
-                            <label class="form-check-label" for="">Node.js</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="reactCheckbox" value="react">
-                            <label class="form-check-label" for="">React</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="technologyCheckbox" value="technology">
-                            <label class="form-check-label" for="">Tecnologia</label>
+                          <div class="form-check form-check-inline" *ngFor="let group of user.groups">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="group-{{ group.groupName }}"
+                              name="{{ group.groupName }}"
+                              value="{{ group.groupName }}"
+                              [(ngModel)]="group.follow"
+                            >
+                            <label class="form-check-label" for="group-{{ group.groupId }}">{{ group.groupLabel }}</label>
                           </div>
                         </div>
                         <div class="form-group" *ngIf="user.firstAccess">
@@ -158,6 +145,7 @@
                           <label for="confirm-password">Confirme a senha</label>
                           <input type="password" class="form-control" id="confirm-password" placeholder="Confirme a senha">
                         </div>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
                       </form>
                       <!-- End Fields -->
                     </div>
