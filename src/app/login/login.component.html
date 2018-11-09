@@ -3,11 +3,12 @@
     <div class="w3-card w3-round w3-white">
       <div class="w3-container w3-padding">
         <h6 class="w3-opacity">Login</h6>
-        <form [formGroup]="loginForm">
-          <input type="email" formControlName="email" class="w3-border w3-padding input-page" placeholder="exemplo@exemplo.com"
-            autofocus>
-          <input type="password" formControlName="password" class="w3-border w3-padding input-page" placeholder="Senha">
-          <button [disabled]="loginForm.invalid" type="button" (click)="login()" class="w3-button w3-theme">Entrar</button>
+        <form #form="ngForm">
+          <input type="email" name="email" [(ngModel)]="signInData.email" class="w3-border w3-padding input-page"
+            placeholder="exemplo@exemplo.com" autofocus>
+          <input type="password" name="password" [(ngModel)]="signInData.password" class="w3-border w3-padding input-page"
+            placeholder="Senha">
+          <button [disabled]="form.invalid" type="button" (click)="signIn()" class="w3-button w3-theme">Entrar</button>
         </form>
       </div>
     </div>

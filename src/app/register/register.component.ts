@@ -11,15 +11,15 @@ export class RegisterComponent implements OnInit {
 
   //signUpForm: FormGroup;
 
-  signUpData: SignUp = {
+  signUpData: Login = {
     id: 0,
-    emailSignUp: '',
-    passwordSignUp: '',
-    confirmPasswordSignUp: '',
-    firstAccessSignUp: true,
-    activeUserSignUp: true,
-    adminSignUp: false
-}
+    email: '',
+    password: '',
+    confirmPassword: '',
+    firstAccess: true,
+    activeUser: true,
+    admin: false
+  }
 
 
   constructor(
@@ -32,16 +32,16 @@ export class RegisterComponent implements OnInit {
   }
 
 
-    signUpAdd(){
-      this.authService.signUpAdd(this.signUpData).subscribe(value => {
-        console.log(value);
-        alert('Adicionado com sucesso');
-  
-       // this.router.navigateByUrl('/todos');
-      }, error => {
-        alert('Erro ao adicionar');
-      });
-    }
- 
+  signUpAdd() {
+    this.authService.signUpAdd(this.signUpData).subscribe(value => {
+      console.log(value);
+      alert('Adicionado com sucesso');
+
+      // this.router.navigateByUrl('/todos');
+    }, error => {
+      alert('Erro ao adicionar');
+    });
+  }
+
 
 }

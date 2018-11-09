@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
- 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,29 +9,45 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm: FormGroup;
-
-  loginData: Login[] = [];//consumo json
-
-  constructor(private formBuilder: FormBuilder,
-    private authService: AuthService,
-    private router: Router) {}
-
- 
-  ngOnInit() {
-    this.loginForm = this.formBuilder.group({
-      email: ['', Validators.email],
-      password: ['', Validators.required]
-    })   
+  signInData: Login = {
+    id: 0,
+    email: '',
+    password: '',
+    confirmPassword: '',
+    firstAccess: true,
+    activeUser: true,
+    admin: false
   }
-        /*parte json */
-        login(){
-          this.authService.getAllJson().subscribe((loginData) => {
-            this.loginData = loginData;
-            console.log(loginData[0].first_access);
-            this.router.navigateByUrl(`user/${loginData[0].id}/edit`)     
-           });   
-          }  
+
+
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) { }
+
+
+  ngOnInit() {
+
+  }
+  /*parte json */
+  signIn() {
+
+    const getEmailSignIn = this.signInData.email;
+
+    this.authService.getAllJson().subscribe((value) => {
+
+      const loginData = value.filter(function (el) {
+        return el.email == getEmailSignIn;
+      });
+
+      const isFirstAccess = loginData[0].firstAccess;
+
+      isFirstAccess ?
+        this.router.navigateByUrl(`user/${value[0].id}/edit`) :
+        this.router.navigateByUrl(`timeline`)
+
+    });
+  }
   /*consume api*/
   // login(){
   //   const emailLogin = this.loginForm.get('email').value;

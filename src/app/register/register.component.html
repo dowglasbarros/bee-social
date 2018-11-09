@@ -1,45 +1,28 @@
 <div class="w3-row-padding content-page">
-  <div class="w3-col m12">
-    <div class="w3-card w3-round w3-white">
-      <div class="w3-container w3-padding">
-        <h6 class="w3-opacity">Cadastro</h6>
-        <form #form="ngForm">
-          <input type="email"
-                name="emailSignUp"
-                [(ngModel)]="signUpData.emailSignUp"
-                class="w3-border w3-padding input-page"
-                placeholder="Email: exemplo@exemplo.com">
-          <input type="password"
-                name="passwordSignUp"
-                [(ngModel)]="signUpData.passwordSignUp"
-                class="w3-border w3-padding input-page" 
-                placeholder="Senha">
-          <input type="password"
-                name="confirmPasswordSignUp"
-                [(ngModel)]="signUpData.confirmPasswordSignUp" 
-                class="w3-border w3-padding input-page" 
-                placeholder="Repetir senha">
-          <br />
-          <input type="checkbox"
-                name="firstAccessSignUp"
-                [(ngModel)]="signUpData.firstAccessSignUp" 
-                class="form-check-input" 
-                checked> Primeiro Acesso
-          <br />
-          <input type="checkbox"
-                name="activeUserSignUp"
-                [(ngModel)]="signUpData.activeUserSignUp" 
-                class="form-check-input" 
-                checked> Usuário Ativo
-          <br />
-          <input type="checkbox"
-                name="adminSignUp"
-                [(ngModel)]="signUpData.adminSignUp"
-                class="form-check-input"> Administrador
-          <br />
-          <button type="button" class="w3-button w3-theme" (click)="signUpAdd()">Cadastrar</button>
-        </form>
+      <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+                  <div class="w3-container w3-padding">
+                        <h6 class="w3-opacity">Cadastro</h6>
+                        <form #form="ngForm">
+                              <input type="email" name="email" [(ngModel)]="signUpData.email" class="w3-border w3-padding input-page"
+                                    placeholder="Email: exemplo@exemplo.com">
+                              <input type="password" name="password" [(ngModel)]="signUpData.password" class="w3-border w3-padding input-page"
+                                    placeholder="Senha">
+                              <input type="password" name="confirmPassword" [(ngModel)]="signUpData.confirmPassword"
+                                    class="w3-border w3-padding input-page" placeholder="Repetir senha">
+                              <br />
+                              <input type="checkbox" name="firstAccess" [(ngModel)]="signUpData.firstAccess" class="form-check-input"
+                                    checked> Primeiro Acesso
+                              <br />
+                              <input type="checkbox" name="activeUser" [(ngModel)]="signUpData.activeUser" class="form-check-input"
+                                    checked> Usuário Ativo
+                              <br />
+                              <input type="checkbox" name="admin" [(ngModel)]="signUpData.admin" class="form-check-input">
+                              Administrador
+                              <br />
+                              <button type="button" class="w3-button w3-theme" (click)="signUpAdd()">Cadastrar</button>
+                        </form>
+                  </div>
+            </div>
       </div>
-    </div>
-  </div>
 </div>
