@@ -1,9 +1,9 @@
 <header class="header">
   <nav class="header-nav">
-    <section class="header-nav-left">        
-          <h1>Bee Social by Avanade</h1>        
+    <section class="header-nav-left">
+      <h1>Bee Social by Avanade</h1>
     </section>
-    <section class="header-nav-right" *ngIf="router.url != '/'">
+    <section class="header-nav-right" *ngIf="router.url != '/' && router.url != '/cadastrar' ">
       <app-nav></app-nav>
     </section>
   </nav>
