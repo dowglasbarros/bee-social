@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-//import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,10 +17,6 @@ import { TimelineAlertBoxComponent } from './timeline/timeline-alert-box/timelin
 import { TimelineListPostsComponent } from './timeline/timeline-list-posts/timeline-list-posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './header/nav/nav.component';
-
-import { ReactiveFormsModule, FormsModule } from '@angular/forms'
-import { CommonModule } from '@angular/common';
-//import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,7 +35,6 @@ import { CommonModule } from '@angular/common';
     NavComponent,
   ],
   imports: [
-    CommonModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
