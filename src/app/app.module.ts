@@ -14,7 +14,7 @@ import { TimelineCreatePostComponent } from './timeline-create-post/timeline-cre
 import { TimelineAlertBoxComponent } from './timeline-alert-box/timeline-alert-box.component';
 import { TimelineListPostsComponent } from './timeline-list-posts/timeline-list-posts.component';
 
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
@@ -37,7 +37,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

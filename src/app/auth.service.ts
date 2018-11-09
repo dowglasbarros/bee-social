@@ -25,4 +25,8 @@ export class AuthService {
     return this.http.get<Login[]>(API_URL);
   }
 
+  signUpAdd(signUpForm: SignUp){
+    return this.http.post(API_URL, signUpForm);
+  }
+
 }
