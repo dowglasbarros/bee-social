@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
     canvas.height = window.innerHeight;
     let stars = [], // Array that contains the stars
       FPS = 60, // Frames per second
-      x = 300, // Number of stars
+      x = 220, // Number of stars
       mouse = {
         x: 0,
         y: 0

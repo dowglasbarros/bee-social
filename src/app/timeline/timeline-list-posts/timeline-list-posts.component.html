@@ -1,16 +1,18 @@
 <section class="list-posts">
-  <div class="w3-container w3-card w3-white w3-round w3-margin post-user" *ngFor="let post of posts">
-    <br>
-    <img src={{post.avatarPicture}} alt="Avatar" class="w3-left w3-circle w3-margin-right timeline-photo">
-    <h4>{{post.userName}}</h4><br>
-    <hr class="w3-clear">
-    <p>{{post.description}}</p>
-    <div class="w3-row-padding">
-      <div class="w3-half" *ngFor="let picture of post.pictures">
-        <img src={{picture.src}} alt={{picture.alt}} class="w3-margin-bottom post-image">
+  <div class="list-posts-wrapper post-user" *ngFor="let post of posts">
+    <div class="list-posts-user">
+      <img src={{post.avatarPicture}} alt="Avatar" class="timeline-photo">
+      <h4>{{post.userName}}</h4><br>
+    </div>
+    <div class="list-posts-text">
+      <p>{{post.description}}</p>
+    </div>
+    <div class="list-posts-img">
+      <div class="list-posts-img-wrapper" *ngFor="let picture of post.pictures">
+        <img src={{picture.src}} alt={{picture.alt}} class="post-image">
       </div>
     </div>
-    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom btn-like" (click)="getLike(post, $event.target.closest('.post-user'))"> 
+    <button type="button" class="btn-like" (click)="getLike(post, $event.target.closest('.post-user'))">
       <i class="fa fa-thumbs-up"></i>
       <span class="like"> Like</span>
     </button>
