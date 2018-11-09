@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
         canvas.height = window.innerHeight;
     let stars = [], // Array that contains the stars
     FPS = 60, // Frames per second
-    x = 100, // Number of stars
+    x = 200, // Number of stars
     mouse = {
       x: 0,
       y: 0

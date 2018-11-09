@@ -1,19 +1,21 @@
 <header class="header">
   <nav class="header-nav">
     <section class="header-nav-left">
-        <a routerLink="" class="header-nav-left__logo">
+        
           <h1>Bee Social by Avanade</h1>
-        </a>
+        
     </section>
     <section class="header-nav-right">
       <div class="header-nav-right__user">
-        <a routerLink="/timeline">
+        <a routerLink="/timeline" class="header-nav-right__user--image">
           <img src="assets/images/avatar3.png"  alt="User Picture">
         </a>
         <div class="header-nav-right__user--logout" id="logout">
-          <span>Sair</span>
-          <i class="fa fa-sign-out" aria-hidden="true"></i>
-         </div>
+          <a routerLink="">
+            <span>Sair</span>
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
     </section>
   </nav>
