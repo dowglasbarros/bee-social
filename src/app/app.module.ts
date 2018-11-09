@@ -16,6 +16,7 @@ import { TimelineCreatePostComponent } from './timeline/timeline-create-post/tim
 import { TimelineAlertBoxComponent } from './timeline/timeline-alert-box/timeline-alert-box.component';
 import { TimelineListPostsComponent } from './timeline/timeline-list-posts/timeline-list-posts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavComponent } from './header/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     TimelineListPostsComponent,
     FooterComponent,
     TimelineAlertBoxComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
