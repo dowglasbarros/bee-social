@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-user-edit',
@@ -8,50 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class UserEditComponent implements OnInit {
   user: User = {
     id: 0,
-    name: 'Dowglas Barros',
-    mail: 'colaborador@avanade.com',
-    position: 'Programador Sênior',
-    city: 'São Paulo',
-    cityWork: 'São Paulo',
-    project: 'Natura',
-    groups: [
-      {
-        groupId: 1,
-        groupLabel: 'Angular',
-        groupName: 'angular',
-        follow: true
-      },
-      {
-        groupId: 2,
-        groupLabel: 'Caronas',
-        groupName: 'caronas',
-        follow: false
-      },
-      {
-        groupId: 3,
-        groupLabel: 'Moradia',
-        groupName: 'moradia',
-        follow: false
-      },
-      {
-        groupId: 4,
-        groupLabel: 'Node.js',
-        groupName: 'nodejs',
-        follow: true
-      },
-      {
-        groupId: 5,
-        groupLabel: 'React',
-        groupName: 'react',
-        follow: true
-      },
-      {
-        groupId: 5,
-        groupLabel: 'Tecnologia',
-        groupName: 'tecnologia',
-        follow: true
-      }
-      ],
+    name: '',
+    mail: '',
+    position: '',
+    city: '',
+    cityWork: '',
+    project: '',
+    groups: [],
     password: '',
     firstAccess: true
   }
@@ -64,9 +29,29 @@ export class UserEditComponent implements OnInit {
   });
   groupLabels = this.groupArray.map(group => group.groupLabel).join(', ');
 
-  constructor() { }
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {
+    activatedRoute.params.subscribe((params) => {
+      this.userService.getUser(params.id).subscribe(user => {
+        this.user = user;
+      });
+    });
+  }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    this.userService.updateUser(this.user)
+        .subscribe(valor => {
+          this.router.navigateByUrl('/user/' + this.user.id);
+          alert('Usuário atualizado com sucesso');
+          }, error => {
+            alert('Erro ao atualizar');
+        });
   }
 
 }
