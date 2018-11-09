@@ -1,0 +1,111 @@
+{
+  "login": [
+    {
+      "email": "rodrigo@gmail.com",
+      "password": "123456",
+      "first_access": true,
+      "active": true,
+      "admin": false,
+      "id": 1
+    },
+    {
+      "email": "rodrigo2@gmail.com",
+      "password": "123456",
+      "first_access": false,
+      "active": true,
+      "admin": false,
+      "id": 2
+    },
+    {
+      "email": "rodrigo3@gmail.com",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "email": "rodrigo5@gmail.com",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "email": "teste@teste.com",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "firstAccess": true,
+      "activeUser": true,
+      "admin": false
+    },
+    {
+      "id": 6,
+      "email": "testeadmin@teste.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "firstAccess": false,
+      "activeUser": false,
+      "admin": true
+    },
+    {
+      "id": 7,
+      "email": "rodrigo12@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "firstAccess": true,
+      "activeUser": true,
+      "admin": true
+    },
+    {
+      "id": 8,
+      "email": "vsdsdvsdvs@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "firstAccess": true,
+      "activeUser": true,
+      "admin": true
+    },
+    {
+      "id": 9,
+      "email": "rodrigo.rodrigo@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "firstAccess": true,
+      "activeUser": true,
+      "admin": true
+    },
+    {
+      "id": 10,
+      "email": "aeee@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "firstAccess": true,
+      "activeUser": true,
+      "admin": false
+    },
+    {
+      "id": 11,
+      "email": "terminator2@gmail.com",
+      "password": "t100",
+      "confirmPassword": "t100",
+      "firstAccess": false,
+      "activeUser": true,
+      "admin": false
+    },
+    {
+      "id": 12,
+      "email": "testeMaster1@teste.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "firstAccess": true,
+      "activeUser": true,
+      "admin": false
+    },
+    {
+      "id": 13,
+      "email": "testeMaster2@teste.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "firstAccess": false,
+      "activeUser": true,
+      "admin": false
+    }
+  ]
+}
