@@ -8,12 +8,12 @@
       <div class="profile">
       <section class="w3-card w3-round w3-white">
         <div class="w3-container">
+          <p class="w3-center"><img src={{userPhoto}} class="w3-circle profile-picture" alt="User's avatar"></p>
           <h4 class="w3-center">{{user.name}}</h4>
-          <p class="w3-center"><img src={{user.photo}} class="w3-circle profile-picture" alt="User's avatar"></p>
           <hr>
           <p>
             <i class="fa fa-envelope-o fa-fw w3-margin-right w3-text-theme"></i>
-            <span>{{user.email}}</span>
+            <span>{{user.mail}}</span>
           </p>
           <p>
             <i class="fa fa-suitcase fa-fw w3-margin-right w3-text-theme"></i>
@@ -24,7 +24,7 @@
           </p>
           <p>
             <i class="fa fa-building fa-fw w3-margin-right w3-text-theme"></i>
-            <span>{{user.company}}</span>
+            <span>{{user.cityWork}}</span>
           </p>
           <p>
             <i class="fa fa-line-chart fa-fw w3-margin-right w3-text-theme"></i>
@@ -55,7 +55,7 @@
                           <div class="col">
                             <label for="name">Nome</label>
                             <input
-                              type="name"
+                              type="text"
                               class="form-control"
                               id="name"
                               name="user.name"
@@ -64,14 +64,14 @@
                             >
                           </div>
                           <div class="col">
-                            <label for="email">E-mail</label>
+                            <label for="mail">E-mail</label>
                             <input
                               type="email"
                               class="form-control"
-                              id="email"
-                              name="user.email"
+                              id="mail"
+                              name="user.mail"
                               placeholder="Digite o seu e-mail"
-                              [(ngModel)]="user.email"
+                              [(ngModel)]="user.mail"
                             >
                           </div>
                         </div>
@@ -79,7 +79,7 @@
                           <div class="col">
                             <label for="position">Cargo</label>
                             <input
-                              type="position"
+                              type="text"
                               class="form-control"
                               id="position"
                               name="user.position"
@@ -90,7 +90,7 @@
                           <div class="col">
                             <label for="city">Cidade que você mora</label>
                             <input
-                              type="city"
+                              type="text"
                               class="form-control"
                               id="city"
                               name="user.city"
@@ -103,18 +103,18 @@
                           <div class="col">
                             <label for="company">Cidade que você trabalha</label>
                             <input
-                              type="company"
+                              type="text"
                               class="form-control"
                               id="company"
                               name="user.company"
                               placeholder="Digite a cidade que trabalha"
-                              [(ngModel)]="user.company"
+                              [(ngModel)]="user.cityWork"
                             >
                           </div>
                           <div class="col">
                             <label for="project">Projeto atual</label>
                             <input
-                              type="project"
+                              type="text"
                               class="form-control"
                               id="project"
                               name="user.project"
@@ -124,21 +124,37 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="groups">Escolha os grupos</label>
-                          <input
-                            type="groups"
-                            class="form-control"
-                            id="groups"
-                            name="user.groups"
-                            placeholder="Digite o projeto que trabalha"
-                            [(ngModel)]="user.groups"
-                          >
+                          <p>Escolha as colméias do seu interesse</p>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="angularCheckbox" value="angular">
+                            <label class="form-check-label" for="">Angular</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="rideCheckbox" value="ride">
+                            <label class="form-check-label" for="">Caronas</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="rentCheckbox" value="rent">
+                            <label class="form-check-label" for="">Moradia</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="nodejsCheckbox" value="nodejs">
+                            <label class="form-check-label" for="">Node.js</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="reactCheckbox" value="react">
+                            <label class="form-check-label" for="">React</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="technologyCheckbox" value="technology">
+                            <label class="form-check-label" for="">Tecnologia</label>
+                          </div>
                         </div>
-                        <div class="form-group" *ngIf="user.first_access">
+                        <div class="form-group" *ngIf="user.firstAccess">
                           <label for="password">Nova senha</label>
                           <input type="password" class="form-control" id="password" placeholder="Nova senha">
                         </div>
-                        <div class="form-group" *ngIf="user.first_access">
+                        <div class="form-group" *ngIf="user.firstAccess">
                           <label for="confirm-password">Confirme a senha</label>
                           <input type="password" class="form-control" id="confirm-password" placeholder="Confirme a senha">
                         </div>
