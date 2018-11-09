@@ -1,22 +1,26 @@
-<br /><br /><br /><br /><br />
-
-<h6 class="w3-opacity">Cadastro</h6>
-<form #form="ngForm">
-      <input type="email" name="email" [(ngModel)]="signUpData.email" class="w3-border w3-padding input-page"
-            placeholder="Email: exemplo@exemplo.com">
-      <input type="password" name="password" [(ngModel)]="signUpData.password" class="w3-border w3-padding input-page"
-            placeholder="Senha">
-      <input type="password" name="confirmPassword" [(ngModel)]="signUpData.confirmPassword" class="w3-border w3-padding input-page"
-            placeholder="Repetir senha">
-      <br />
-      <input type="checkbox" name="firstAccess" [(ngModel)]="signUpData.firstAccess" class="form-check-input" checked>
-      Primeiro Acesso
-      <br />
-      <input type="checkbox" name="activeUser" [(ngModel)]="signUpData.activeUser" class="form-check-input" checked>
-      Usuário Ativo
-      <br />
-      <input type="checkbox" name="admin" [(ngModel)]="signUpData.admin" class="form-check-input">
-      Administrador
-      <br />
-      <button type="button" class="w3-button w3-theme" (click)="signUpAdd()">Cadastrar</button>
-</form>
+<div class="content-page">
+  <div class="content-page__canvas">
+    <canvas id="canvas"></canvas>
+  </div>
+  <div class="content-page__register">
+    <div class="content-page__register--wrapper">
+      <h6>Cadastrar usuário</h6>
+      <form #form="ngForm">
+        <input type="email" name="email" [(ngModel)]="signUpData.email" placeholder="Email: exemplo@exemplo.com">
+        <input type="password" name="password" [(ngModel)]="signUpData.password" placeholder="Senha">
+        <input type="password" name="confirmPassword" [(ngModel)]="signUpData.confirmPassword" placeholder="Repetir senha">
+        <br />
+        <input type="checkbox" name="firstAccess" [(ngModel)]="signUpData.firstAccess" class="form-check-input" checked>
+        Primeiro Acesso
+        <br />
+        <input type="checkbox" name="activeUser" [(ngModel)]="signUpData.activeUser" class="form-check-input" checked>
+        Usuário Ativo
+        <br />
+        <input type="checkbox" name="admin" [(ngModel)]="signUpData.admin" class="form-check-input">
+        Administrador
+        <br />
+        <button type="button" (click)="signUpAdd()">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+</div>
