@@ -77,29 +77,4 @@ export class TimelineProfileComponent implements OnInit {
   ngOnInit() {
   }
 
-  showTextMenu() {
-    var myGroups = document.getElementById("my-groups");
-    if (myGroups.className.indexOf("w3-show") == -1) {
-      myGroups.className += " w3-show";
-      myGroups.previousElementSibling.className += " w3-theme-d1";
-    } else {
-      myGroups.className = myGroups.className.replace("w3-show", "");
-      myGroups.previousElementSibling.className =
-        myGroups.previousElementSibling.className.replace(" w3-theme-d1", "");
-    }
-  }
-
-  showPhotos() {
-    var myPictures = document.getElementById("my-pictures");
-    if (myPictures.className.indexOf("w3-show") == -1) {
-      myPictures.className += " w3-show";
-      myPictures.previousElementSibling.className += " w3-theme-d1";
-    }
-    else {
-      myPictures.className = myPictures.className.replace("w3-show", "");
-      myPictures.previousElementSibling.className =
-        myPictures.previousElementSibling.className.replace(" w3-theme-d1", "");
-    }
-  }
-
 }

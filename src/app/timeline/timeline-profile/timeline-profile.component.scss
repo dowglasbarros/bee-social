@@ -1,13 +1,6 @@
-.groups{
-    padding: 10px 0;
-    &__list{
-        list-style: none;
-    }
-}
-
 .profile{
     &-card{
-        background: #0d273e;
+        background: #124666;
         color: #fff;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
         border-radius: 4px;
@@ -34,5 +27,77 @@
             }
 
         }
+    }
+}
+.groups-card{
+    &--title{
+        background: #5b7c8e;
+        color: #fff;
+        padding: 10px 20px; 
+        border-radius: 4px;
+        i{
+            margin-right: 10px;
+        }
+    }
+    .groups-card--list{
+        .groups{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 20px;
+            list-style: none;
+            li{
+                display: inline-flex;
+                width: 80px;
+                height: 80px;
+                background: url(../../../assets/images/colmeia-bg.png) no-repeat center;
+                background-size: contain;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-weight: bold;
+                font-size: .7rem;
+                margin-bottom: 20px;
+                cursor: pointer;
+                transition: .4s linear;
+                &:hover{
+                    opacity: .9;
+                    transform: scale(1.1);
+                    transition: .4s linear;
+                }
+            }
+        }
+    }
+    .groups-friends--list{
+        display: flex;
+        .friends-list{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 20px;
+            &-item{
+                display: inline-flex;
+                width: 60px;
+                height: 60px; 
+                margin: 10px;
+                img{
+                    max-width: 100%;
+                    border-radius: 50%;
+                    transition: .4s linear;
+                    cursor: pointer;
+                    &:hover{
+                        opacity: .9;
+                        transform: scale(1.1);
+                        box-shadow: 1px 1px 7px 2px #124666;
+                        transition: .4s linear;
+                    }
+                }
+            }
+        }
+
     }
 }
