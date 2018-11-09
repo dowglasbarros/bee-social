@@ -38,8 +38,11 @@ export class TimelineListPostsComponent implements OnInit {
   }
 
   loadPosts() {
+    console.log('1')
     this.postService.getPost().subscribe(posts => {
       this.posts = posts.reverse()
+
+      console.log('posts' , posts)
     })
   }
 }

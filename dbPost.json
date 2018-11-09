@@ -314,6 +314,21 @@
         }
       ],
       "likes": 0
+    },
+    {
+      "id": 22,
+      "userId": 0,
+      "userName": "Felipe",
+      "avatarPicture": "assets/images/avatar2.png",
+      "description": "asdsadas",
+      "groupId": 0,
+      "pictures": [
+        {
+          "src": "",
+          "alt": ""
+        }
+      ],
+      "likes": 0
     }
   ]
 }

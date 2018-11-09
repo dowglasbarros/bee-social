@@ -31,17 +31,20 @@ export class TimelineCreatePostComponent implements OnInit {
   constructor(
     private insertPostService: PostService,
     private router: Router,
-  ) { }
+  ) {
+
+  }
 
   ngOnInit() {
   }
 
   insertPost() {
-    this.insertFields()
+    // this.insertFields()
 
-    this.insertPostService.addPost(this.post).subscribe(texto => {
-      EventEmitterService.get('newPost').emit()
-    })
+    // this.insertPostService.addPost(this.post).subscribe(texto => {
+    //   EventEmitterService.get('newPost').emit()
+    // })
+
   }
 
   insertFields() {
@@ -60,5 +63,8 @@ export class TimelineCreatePostComponent implements OnInit {
     this.value = ((<HTMLInputElement>resp.target).value);
   }
 
-  
+
+
+
+
 }
