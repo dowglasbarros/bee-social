@@ -1,0 +1,49 @@
+{
+  "id": 0,
+  "name": "Dowglas Barros",
+  "mail": "colaborador@avanade.com",
+  "position": "Programador Sênior",
+  "city": "São Paulo",
+  "cityWork": "São Paulo",
+  "project": "Natura",
+  "groups": [
+    {
+      "groupId": 1,
+      "groupLabel": "Angular",
+      "groupName": "angular",
+      "follow": true
+    },
+    {
+      "groupId": 2,
+      "groupLabel": "Caronas",
+      "groupName": "caronas",
+      "follow": false
+    },
+    {
+      "groupId": 3,
+      "groupLabel": "Moradia",
+      "groupName": "moradia",
+      "follow": false
+    },
+    {
+      "groupId": 4,
+      "groupLabel": "Node.js",
+      "groupName": "nodejs",
+      "follow": true
+    },
+    {
+      "groupId": 5,
+      "groupLabel": "React",
+      "groupName": "react",
+      "follow": true
+    },
+    {
+      "groupId": 5,
+      "groupLabel": "Tecnologia",
+      "groupName": "tecnologia",
+      "follow": true
+    }
+    ],
+  "password": "123456",
+  "firstAccess": true
+}
