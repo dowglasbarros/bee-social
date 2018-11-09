@@ -8,7 +8,9 @@ type User = {
   project: string;
   groups: {
     groupId: number,
-    groupName: string;
+    groupLabel: string,
+    groupName: string,
+    follow: boolean
   }[];
   password: string;
   firstAccess: boolean;
