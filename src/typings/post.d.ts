@@ -8,5 +8,6 @@ type Post = {
   pictures: [{
     src: string;
     alt: string;
-  }]
+  }],
+  likes: number
 }

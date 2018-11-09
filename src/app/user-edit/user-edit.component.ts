@@ -6,17 +6,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-edit.component.scss']
 })
 export class UserEditComponent implements OnInit {
-  user = {
+  user: User = {
+    id: 0,
     name: 'Dowglas Barros',
-    email: 'colaborador@avanade.com',
-    photo: "assets/images/avatar3.png",
+    mail: 'colaborador@avanade.com',
     position: 'Programador Sênior',
     city: 'São Paulo',
-    company: 'São Paulo',
+    cityWork: 'São Paulo',
     project: 'Natura',
-    groups: ['Angular', 'Node.js'],
-    first_access: true
+    groups: [
+      {
+        groupId: 1,
+        groupName: 'Angular'
+      },
+      {
+        groupId: 2,
+        groupName: 'Node.js'
+      }
+      ],
+    password: '',
+    firstAccess: true
   }
+
+  userPhoto = 'assets/images/avatar3.png';
 
   constructor() { }
 

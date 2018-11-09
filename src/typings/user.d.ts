@@ -1,16 +1,15 @@
 type User = {
-    userId: number;
-    userName: string;
-    userMail: string;
-    userRole: string;
-    userCity: string;
-    userCityWork: string;
-    userProject: string;
-    userGroups: [
-        {groupId: number
-         groupName: string;
-        }
-    ];
-    userPassword: string;
-    userFirstAccess: boolean;
+  id: number;
+  name: string;
+  mail: string;
+  position: string;
+  city: string;
+  cityWork: string;
+  project: string;
+  groups: {
+    groupId: number,
+    groupName: string;
+  }[];
+  password: string;
+  firstAccess: boolean;
 }
