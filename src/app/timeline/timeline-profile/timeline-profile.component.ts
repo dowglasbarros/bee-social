@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { EventEmitterService } from 'src/app/event-emitter.service';
+
 
 const USER = {
   "name": "Nome do funcionário",
   "photo": "assets/images/avatar3.png",
   "email": "funcionario@avanade.com",
-  "position": "Programador Senior",
-  "city": "São Paulo/SP",
-  "cityWork": "São Paulo/SP",
-  "project": "Natura"
+  "ocupation": "Programador Senior",
+  "location": "São Paulo/SP",
+  "birthday": "15 de Novembro de 1988"
 }
 
 const GROUPS = [
@@ -73,12 +74,14 @@ export class TimelineProfileComponent implements OnInit {
   photos = PHOTOS;
   groups = GROUPS;
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit() {
   }
 
   getGroupId(event) {
+
     let groupName = event.srcElement.innerHTML;
     let shareWith = <HTMLElement>document.querySelector(".timeline-post-card h6");
     if (groupName == "Ver Todos") {
@@ -86,5 +89,7 @@ export class TimelineProfileComponent implements OnInit {
     } else {
       shareWith.innerHTML = `Compartilhe em <span id="activeGroup">${groupName}</span>`;
     }
+
+    EventEmitterService.get('newPost').emit()
   }
 }
