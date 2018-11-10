@@ -42,7 +42,6 @@ export class TimelineListPostsComponent implements OnInit {
   loadPosts() {
 
     let spanGroupName = document.querySelector("#activeGroup");
-    console.log(spanGroupName.innerHTML.toString())
     if (spanGroupName === null) {
       this.postService.getPost().subscribe(posts => {
         console.log(posts)
