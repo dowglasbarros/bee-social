@@ -33,17 +33,18 @@
     <div class="groups-card--wrapper">
       <div class="groups-card--title">
         <i class="fa fa-forumbee"></i>
-        <span>Meus grupos</span>
+        <span>Minhas colmeias </span>
       </div>
       <div id="my-groups" class="groups-card--list">
-        <ul class="groups" >
-          <li id="group{{i}}" class="groups__list" *ngFor="let group of groups; let i = index">{{group.name}}</li>
+        <ul class="groups">
+          <li id="seeAllGroups" class="groups__list" (click)="getGroupId($event)">Ver Todos</li>
+          <li id="group{{i}}" class="groups__list" *ngFor="let group of groups; let i = index" (click)="getGroupId($event) ">{{group.name}}</li>
         </ul>
       </div>
       <div class="groups-card--title">
         <i class="fa fa-address-card"></i>
         <span>Meus amigos</span>
-      </div>    
+      </div>
       <div id="my-pictures" class="groups-friends--list">
         <div class="friends-list">
           <div id="photo{{i}}" class="friends-list-item" *ngFor="let photo of photos; let i = index">

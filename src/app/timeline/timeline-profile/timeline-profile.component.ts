@@ -77,4 +77,13 @@ export class TimelineProfileComponent implements OnInit {
   ngOnInit() {
   }
 
+  getGroupId(event) {
+    let groupName = event.srcElement.innerHTML;
+    let shareWith = <HTMLElement>document.querySelector(".timeline-post-card h6");
+    if (groupName == "Ver Todos") {
+      shareWith.innerText = `Compartilhe no seu perfil`;
+    } else {
+      shareWith.innerText = `Compartilhe em ${groupName}`;
+    }
+  }
 }
