@@ -83,7 +83,7 @@ export class TimelineProfileComponent implements OnInit {
     if (groupName == "Ver Todos") {
       shareWith.innerText = `Compartilhe no seu perfil`;
     } else {
-      shareWith.innerText = `Compartilhe em ${groupName}`;
+      shareWith.innerHTML = `Compartilhe em <span id="activeGroup">${groupName}</span>`;
     }
   }
 }

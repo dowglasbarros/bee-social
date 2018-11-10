@@ -6,19 +6,24 @@
     <div class="content-page__register--wrapper">
       <h6>Cadastrar usuário</h6>
       <form #form="ngForm">
-        <input type="email" name="email" [(ngModel)]="signUpData.email" placeholder="Email: exemplo@exemplo.com">
-        <input type="password" name="password" [(ngModel)]="signUpData.password" placeholder="Senha">
-        <input type="password" name="confirmPassword" [(ngModel)]="signUpData.confirmPassword" placeholder="Repetir senha">
-        <br />
-        <input type="checkbox" name="firstAccess" [(ngModel)]="signUpData.firstAccess" class="form-check-input" checked>
-        Primeiro Acesso
-        <br />
-        <input type="checkbox" name="activeUser" [(ngModel)]="signUpData.activeUser" class="form-check-input" checked>
-        Usuário Ativo
-        <br />
-        <input type="checkbox" name="admin" [(ngModel)]="signUpData.admin" class="form-check-input">
-        Administrador
-        <br />
+        <input type="email" name="email" [(ngModel)]="signUpData.email" placeholder="exemplo@exemplo.com" class="inputText">
+        <input type="password" name="password" [(ngModel)]="signUpData.password" placeholder="Senha" class="inputText">
+        <input type="password" name="confirmPassword" [(ngModel)]="signUpData.confirmPassword" placeholder="Repetir senha"
+          class="inputText">
+        <div class="inputCheckbox">
+          <div>
+            <input id="input1" type="checkbox" name="firstAccess" [(ngModel)]="signUpData.firstAccess" checked>
+            <label for="input1">Primeiro Acesso</label>
+          </div>
+          <div>
+            <input id="input2" type="checkbox" name="activeUser" [(ngModel)]="signUpData.activeUser" checked>
+            <label for="input2">Usuário Ativo</label>
+          </div>
+          <div>
+            <input id="input3" type="checkbox" name="admin" [(ngModel)]="signUpData.admin">
+            <label for="input3">Administrador</label>
+          </div>
+        </div>
         <button type="button" (click)="signUpAdd()">Cadastrar</button>
       </form>
     </div>
