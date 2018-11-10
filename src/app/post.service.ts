@@ -16,7 +16,7 @@ export class PostService {
     return this.http.post(this.URL, post);
   }
 
-  getPost() : Observable<Post[]> {
+  getPost(): Observable<Post[]> {
     return this.http.get<Post[]>(this.URL);
   }
 
@@ -30,8 +30,8 @@ export class PostService {
     return this.http.get<Post[]>(this.URL); //Alterar URL para receber o parametro do userID
   }
 
-  getPostGroup(userGroup: number): Observable<Post[]> {
-    return this.http.get<Post[]>(this.URL); //Alterar URL para receber o parametro do userGroup
+  getPostGroup(nameGroup: string): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.URL}/${nameGroup}`); //Alterar URL para receber o parametro do userGroup
   }
 
 

@@ -43,6 +43,12 @@ export class TimelineCreatePostComponent implements OnInit {
   }
 
   insertFields() {
+    let spanGroupName = document.querySelector("#activeGroup");
+    if (spanGroupName !== null) {
+      spanGroupName = document.getElementById("activeGroup");
+      this.post.groupName = spanGroupName.innerHTML.toString();
+    }
+
     this.post.description = this.value
     this.post.userName = 'Felipe'
     this.post.pictures[0].src = this.file

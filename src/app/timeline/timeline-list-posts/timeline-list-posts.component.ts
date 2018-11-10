@@ -16,8 +16,10 @@ export class TimelineListPostsComponent implements OnInit {
   constructor(
     private postService: PostService,
   ) {
-    EventEmitterService.get('newPost').subscribe(data =>
-      this.loadPosts())
+    EventEmitterService.get('newPost').subscribe(data => {
+      console.log('emiter')
+      this.loadPosts()
+    })
   }
 
   ngOnInit() {
@@ -38,9 +40,23 @@ export class TimelineListPostsComponent implements OnInit {
   }
 
   loadPosts() {
-    this.postService.getPost().subscribe(posts => {
-      console.log(posts)
-      this.posts = posts.reverse()
-    })
+
+    let spanGroupName = document.querySelector("#activeGroup");
+    console.log(spanGroupName.innerHTML.toString())
+    if (spanGroupName === null) {
+      this.postService.getPost().subscribe(posts => {
+        console.log(posts)
+        this.posts = posts.reverse()
+      })
+    } else {
+      let groupName = spanGroupName.innerHTML.toString();
+      this.postService.getPostGroup(groupName).subscribe(posts => {
+        console.log(posts)
+        this.posts = posts.reverse()
+      })
+    }
+
+
+
   }
 }

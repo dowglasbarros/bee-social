@@ -48,8 +48,7 @@ async function main() {
             }
           }
         }
-      }
-      , {
+      }, {
         method: 'POST',
         path: '/posts',
         handler: async (request, h) => {
@@ -72,7 +71,32 @@ async function main() {
 
           }
         }
-      }
+      }, {
+        path: '/posts/{groupName}',
+        method: 'GET',
+        handler: async (request, h) => {
+          try {
+            const { groupName } = request.params;
+            const result = await posts.listar({
+              groupName: groupName,
+            });
+            return result;
+          }
+          catch (error) {
+            console.error(error);
+            return Boom.internal();
+          }
+        },
+        config: {
+          validate: {
+            params: {
+              groupName: Joi.string()
+                .max(200)
+                .required(),
+            }
+          }
+        }
+      },
     ])
     await app.start()
     console.log(`Servidor rodando em: ${app.info.port}`)
