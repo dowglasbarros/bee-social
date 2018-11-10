@@ -4,9 +4,10 @@ const USER = {
   "name": "Nome do funcionário",
   "photo": "assets/images/avatar3.png",
   "email": "funcionario@avanade.com",
-  "ocupation": "Programador Senior",
-  "location": "São Paulo/SP",
-  "birthday": "15 de Novembro de 1988"
+  "position": "Programador Senior",
+  "city": "São Paulo/SP",
+  "cityWork": "São Paulo/SP",
+  "project": "Natura"
 }
 
 const GROUPS = [
