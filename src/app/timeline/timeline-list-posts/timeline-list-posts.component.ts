@@ -24,14 +24,14 @@ export class TimelineListPostsComponent implements OnInit {
     this.loadPosts()
   }
 
-  getLike(post, postUser){
+  getLike(post, postUser) {
     const btnLike = postUser.querySelector('.btn-like')
     const classActivatedLike = 'like-activated';
-    if(btnLike.classList.contains(classActivatedLike)){
+    if (btnLike.classList.contains(classActivatedLike)) {
       post.likes--;
       btnLike.classList.remove(classActivatedLike);
     }
-    else{
+    else {
       post.likes++;
       btnLike.classList.add(classActivatedLike);
     }
@@ -39,6 +39,7 @@ export class TimelineListPostsComponent implements OnInit {
 
   loadPosts() {
     this.postService.getPost().subscribe(posts => {
+      console.log(posts)
       this.posts = posts.reverse()
     })
   }

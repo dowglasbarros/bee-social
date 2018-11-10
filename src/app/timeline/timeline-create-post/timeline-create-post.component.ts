@@ -12,12 +12,10 @@ import { EventEmitterService } from '../../event-emitter.service';
 export class TimelineCreatePostComponent implements OnInit {
 
   post: Post = {
-    id: 0,
-    userId: 0,
     userName: '',
+    groupName: '',
     avatarPicture: 'assets/images/avatar2.png',
     description: '',
-    groupId: 0,
     pictures: [{
       src: '',
       alt: '',
@@ -60,5 +58,5 @@ export class TimelineCreatePostComponent implements OnInit {
     this.value = ((<HTMLInputElement>resp.target).value);
   }
 
-  
+
 }

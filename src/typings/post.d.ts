@@ -1,8 +1,6 @@
 type Post = {
-  id: number;
-  userId: number;
   userName: string;
-  groupId: number;
+  groupName: string;
   avatarPicture: string;
   description: string;
   pictures: [{
