@@ -25,6 +25,7 @@
             padding-left: 5px;
             border: none;
             border-radius: 5px;
+            cursor: pointer;
         }
     }
 }
@@ -45,6 +46,7 @@
         text-transform: uppercase;
         border-radius: 5px;
         transition: .4s linear;
+        cursor: pointer;
         &:hover{
             background: #5b7c8e;
             box-shadow: 0px 0px 8px 1px #0d273e;

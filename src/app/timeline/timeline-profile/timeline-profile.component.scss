@@ -1,6 +1,6 @@
 .profile{
     &-card{
-        background: #124666;
+        background: #5b7c8e;
         color: #fff;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
         border-radius: 4px;
@@ -8,6 +8,7 @@
             padding: 20px;
             h4{
                 text-align: center;
+                font-weight: bold;
             }
             .profile-card-picture{
                 display: flex;
