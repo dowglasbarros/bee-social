@@ -22,7 +22,7 @@ class DataBaseMongoDb {
 
   static conectar() {
     Mongoose
-      .connect('mongodb://localhost:27017/beeSocial', { useNewUrlParser: true })
+      .connect('mongodb://felipe:QWERTY1@ds031088.mlab.com:31088/beesocial', { useNewUrlParser: true })
 
     const connection = Mongoose.connection
     connection.once('open', () => console.log('MongoDB Ativo!!'))
