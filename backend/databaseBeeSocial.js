@@ -12,12 +12,51 @@ const postSchema = new Mongoose.Schema({
   likes: Number
 })
 
+const registerSchema = new Mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  firstAccess: {
+    type: Boolean,
+    default: true
+  },
+  activeUser: {
+    type: Boolean,
+    default: true
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false
+  }
+})
 
+const loginSchema = new Mongoose.Schema({
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  }, firstAccess: {
+    type: Boolean,
+
+  },
+})
 
 class DataBaseMongoDb {
 
   constructor(postDb) {
-    this.postDb = postDb
+    this.postDb = postDb;
   }
 
   static conectar() {
@@ -27,20 +66,26 @@ class DataBaseMongoDb {
     const connection = Mongoose.connection
     connection.once('open', () => console.log('MongoDB Ativo!!'))
 
-    const postModel = Mongoose.model('posts', postSchema)
-    return postModel
+    // const postModel = Mongoose.model('posts', postSchema)
+    // return postModel
+
   }
 
-  async cadastrar(item) {
-    const resultCreate = await this.postDb.create(item)
+  async cadastrar(collection, item) {
+    const resultCreate = await getModel(collection).create(item)
     return resultCreate;
   }
 
-  listar(query, pagination = { limitar: 1000, ignorar: 0 }) {
-    return this.postDb
+  listar(collection, query, pagination = { limitar: 1000, ignorar: 0 }) {
+    return getModel(collection)
       .find(query)
       .skip(pagination.ignorar)
       .limit(pagination.limitar)
+  }
+
+  signIn(collection, query) {
+    return getModel(collection)
+      .findOne(query)
   }
 
 }
@@ -73,3 +118,16 @@ class DataBaseMongoDb {
 // main()
 
 module.exports = DataBaseMongoDb;
+
+function getModel(collection) {
+
+  switch (collection) {
+    case 'posts':
+      return Mongoose.model('posts', postSchema);
+    case 'register':
+      return Mongoose.model('register', registerSchema);
+    case 'login':
+      return Mongoose.model('register', loginSchema);
+  }
+
+}

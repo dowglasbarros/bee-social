@@ -9,14 +9,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  signInData: Login = {
-    id: 0,
+  signInData: signIn = {
     email: '',
     password: '',
-    confirmPassword: '',
-    firstAccess: true,
-    activeUser: true,
-    admin: false
   }
 
 
@@ -32,16 +27,34 @@ export class LoginComponent implements OnInit {
 
   signIn() {
 
-    const getEmailSignIn = this.signInData.email;
-    this.authService.getAllJson().subscribe((value) => {
-      const loginData = value.filter(function (el) {
-        return el.email == getEmailSignIn;
-      });
-      const isFirstAccess = loginData[0].firstAccess;
-      isFirstAccess ?
-        this.router.navigateByUrl(`user/${loginData[0].id}`) :
-        this.router.navigateByUrl(`timeline`)
+    this.authService
+      .authenticate(this.signInData)
+      .subscribe(
+        value => {
+          if (value === null) {
+            alert('Login ou senha inválidos')
+          } else {
+            value['firstAccess'] === true ?
+              this.router.navigateByUrl(`user/1`) :
+              this.router.navigateByUrl(`timeline`);
+          }
+        },
 
-    });
+        err => {
+          console.log(err);
+        }
+      )
+
+    // const getEmailSignIn = this.signInData.email;
+    // this.authService.getAllJson().subscribe((value) => {
+    //   const loginData = value.filter(function (el) {
+    //     return el.email == getEmailSignIn;
+    //   });
+    //   const isFirstAccess = loginData[0].firstAccess;
+    //   isFirstAccess ?
+    //     this.router.navigateByUrl(`user/${loginData[0].id}`) :
+    //     this.router.navigateByUrl(`timeline`)
+
+    // });
   }
 }

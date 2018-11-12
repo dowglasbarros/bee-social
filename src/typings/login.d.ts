@@ -1,9 +1,13 @@
-type Login = {
-    id: number;
+type signUp = {
+    name: string;
     email: string;
     password: string;
-    confirmPassword: string;
-    firstAccess: boolean,
-    activeUser: boolean,
-    admin: boolean
+    firstAccess: boolean;
+    activeUser: boolean;
+    isAdmin: boolean;
+}
+
+type signIn = {
+    email: string;
+    password: string;
 }

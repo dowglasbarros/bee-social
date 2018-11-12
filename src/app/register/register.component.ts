@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-register',
@@ -9,14 +10,13 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  signUpData: Login = {
-    id: 0,
+  signUpData: signUp = {
+    name: '',
     email: '',
     password: '',
-    confirmPassword: '',
     firstAccess: true,
     activeUser: true,
-    admin: false
+    isAdmin: false,
   }
 
 

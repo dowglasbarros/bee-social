@@ -6,10 +6,9 @@
     <div class="content-page__register--wrapper">
       <h6>Cadastrar usuário</h6>
       <form #form="ngForm">
+        <input type="text" name="name" [(ngModel)]="signUpData.name" placeholder="Nome" class="inputText">
         <input type="email" name="email" [(ngModel)]="signUpData.email" placeholder="exemplo@exemplo.com" class="inputText">
         <input type="password" name="password" [(ngModel)]="signUpData.password" placeholder="Senha" class="inputText">
-        <input type="password" name="confirmPassword" [(ngModel)]="signUpData.confirmPassword" placeholder="Repetir senha"
-          class="inputText">
         <div class="inputCheckbox">
           <div>
             <input id="input1" type="checkbox" name="firstAccess" [(ngModel)]="signUpData.firstAccess" checked>
@@ -20,7 +19,7 @@
             <label for="input2">Usuário Ativo</label>
           </div>
           <div>
-            <input id="input3" type="checkbox" name="admin" [(ngModel)]="signUpData.admin">
+            <input id="input3" type="checkbox" name="isAdmin" [(ngModel)]="signUpData.isAdmin">
             <label for="input3">Administrador</label>
           </div>
         </div>
