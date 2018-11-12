@@ -3,12 +3,13 @@ import { EventEmitterService } from 'src/app/event-emitter.service';
 
 
 const USER = {
-  "name": "Nome do funcionário",
+  "name": "Natalia",
   "photo": "assets/images/avatar3.png",
   "email": "funcionario@avanade.com",
-  "ocupation": "Programador Senior",
-  "location": "São Paulo/SP",
-  "birthday": "15 de Novembro de 1988"
+  "position": "Programador Senior",
+  "city": "São Paulo",
+  "cityWork": "São Paulo",
+  "project": "Projeto 1"
 }
 
 const GROUPS = [
