@@ -34,33 +34,33 @@ const GROUPS = [
 const PHOTOS = [
   {
     "id": 1,
-    "src": "assets/images/lights.jpg",
-    "alt": "photo of lights"
+    "src": "assets/images/alunos/6.jpg",
+    "alt": "contact"
   },
   {
     "id": 2,
-    "src": "assets/images/nature.jpg",
-    "alt": "photo of narute"
+    "src": "assets/images/alunos/10copy.jpg",
+    "alt": "contact"
   },
   {
     "id": 3,
-    "src": "assets/images/mountains.jpg",
-    "alt": "photo of mountains"
+    "src": "assets/images/alunos/17copy.jpg",
+    "alt": "contact"
   },
   {
     "id": 4,
-    "src": "assets/images/forest.jpg",
-    "alt": "photo of forest"
+    "src": "assets/images/alunos/12copy.jpg",
+    "alt": "contact"
   },
   {
     "id": 5,
-    "src": "assets/images/nature.jpg",
-    "alt": "photo of nature"
+    "src": "assets/images/alunos/16copy.jpg",
+    "alt": "contact"
   },
   {
     "id": 6,
-    "src": "assets/images/snow.jpg",
-    "alt": "photo of snow"
+    "src": "assets/images/alunos/19copy.jpg",
+    "alt": "contact"
   }
 ];
 
