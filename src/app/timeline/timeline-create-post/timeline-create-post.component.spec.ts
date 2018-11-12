@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { TimelineCreatePostComponent } from './timeline-create-post.component';
 
@@ -8,9 +10,10 @@ describe('TimelineCreatePostComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TimelineCreatePostComponent ]
+      imports: [HttpClientTestingModule, RouterTestingModule],
+      declarations: [TimelineCreatePostComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +22,12 @@ describe('TimelineCreatePostComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create a post', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    let textPost = "Lorem ipsum";
+    compiled.querySelector('#input-post').value = textPost;
+    component.insertPost();
+    expect(compiled.querySelector('#post-user-0 .list-posts-text p').textContent).toEqual(textPost);
   });
+
 });

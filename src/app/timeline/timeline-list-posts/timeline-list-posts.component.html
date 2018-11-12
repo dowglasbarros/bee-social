@@ -1,5 +1,5 @@
 <section class="list-posts">
-  <div class="list-posts-wrapper post-user" *ngFor="let post of posts">
+  <div id="post-user-{{i}}" class="list-posts-wrapper post-user" *ngFor="let post of posts; let i = index">
     <div class="list-posts-user">
       <img src={{post.avatarPicture}} alt="Avatar" class="timeline-photo">
       <h4>{{post.userName}}</h4><br>

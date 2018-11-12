@@ -30,6 +30,18 @@ export class LoginComponent implements OnInit {
 
   }
 
+  setEmail(email) {
+    this.signInData.email = email;
+  }
+
+  setPassword(password) {
+    this.signInData.password = password;
+  }
+
+  setConfirmationPassword(password) {
+    this.signInData.confirmPassword = password;
+  }
+
   signIn() {
 
     const getEmailSignIn = this.signInData.email;
