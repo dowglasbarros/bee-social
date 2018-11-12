@@ -49,9 +49,14 @@ export class TimelineCreatePostComponent implements OnInit {
       this.post.groupName = spanGroupName.innerHTML.toString();
     }
 
+    let userName = document.getElementById('username').innerHTML.toString()
+    let userPhoto = document.getElementById('userphoto').attributes["src"].value
+
+    console.log(userPhoto)
+
     this.post.description = this.value
-    this.post.userName = 'Felipe'
-    this.post.pictures[0].src = this.file
+    this.post.userName = userName
+    this.post.avatarPicture = userPhoto
   }
 
   onFileChanged(event) {

@@ -45,7 +45,6 @@ class DataBaseMongoDb {
 
 }
 
-
 // async function main() {
 //   const postDb = DataBaseMongoDb.conectar()
 //   const database = new DataBaseMongoDb(postDb)
