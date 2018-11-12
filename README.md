@@ -1,5 +1,4 @@
-Bee Social by Avanade
-
+# Bee Social by Avanade
 As a  final paper for the Avanade&Gama Experience, we had to develop a Social Network.
 
 Our group decided to develop a corporate network.
