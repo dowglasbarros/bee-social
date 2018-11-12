@@ -1,11 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 *{font-family: "Open Sans", sans-serif}
 
-// .content-page{
-//     max-width: 1400px;
-//     margin-top:80px;
-// }
-
 .profile-picture{
     height: 106px;
     width:106px;
@@ -22,4 +17,8 @@
 .input-page{
     width: 100%;
     margin-bottom: 10px;
+}
+
+body{
+    overflow-x: hidden;
 }
