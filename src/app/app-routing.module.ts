@@ -6,6 +6,7 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { TimelineListPostsComponent } from './timeline/timeline-list-posts/timeline-list-posts.component';
+import { InvalidUrlComponent } from './invalid-url/invalid-url.component';
 
 const routes: Routes = [
   {
@@ -31,7 +32,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'timeline'
+    component: InvalidUrlComponent
   }
 ];
 

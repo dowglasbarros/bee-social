@@ -17,6 +17,7 @@ import { TimelineAlertBoxComponent } from './timeline/timeline-alert-box/timelin
 import { TimelineListPostsComponent } from './timeline/timeline-list-posts/timeline-list-posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './header/nav/nav.component';
+import { InvalidUrlComponent } from './invalid-url/invalid-url.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { NavComponent } from './header/nav/nav.component';
     FooterComponent,
     TimelineAlertBoxComponent,
     NavComponent,
+    InvalidUrlComponent,
   ],
   imports: [
     BrowserModule,

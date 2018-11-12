@@ -24,7 +24,7 @@ export class UserEditComponent implements OnInit {
   userPhoto = 'assets/images/avatar3.png';
 
   /* tratando o array de grupos */
-  groupArray = this.user.groups.filter(function (group) {
+  groupArray = this.user.groups.filter(function(group) {
     return group.follow;
   });
   groupLabels = this.groupArray.map(group => group.groupLabel).join(', ');
@@ -34,11 +34,14 @@ export class UserEditComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {
-    activatedRoute.params.subscribe((params) => {
-      this.userService.getUser(params.id).subscribe(user => {
-        this.user = user;
+    activatedRoute.params
+      .subscribe((params) => {
+        this.userService.getUser(params.id).subscribe(user => {
+          this.user = user;
+        }, error => {
+          this.router.navigateByUrl('/invalid-url');
+        });
       });
-    });
   }
 
   ngOnInit() {
@@ -46,12 +49,12 @@ export class UserEditComponent implements OnInit {
 
   onSubmit() {
     this.userService.updateUser(this.user)
-      .subscribe(valor => {
-        this.router.navigateByUrl('/user/' + this.user.id);
-        alert('Usuário atualizado com sucesso');
-      }, error => {
-        alert('Erro ao atualizar');
-      });
+        .subscribe(valor => {
+          this.router.navigateByUrl('/user/' + this.user.id);
+          alert('Usuário atualizado com sucesso');
+          }, error => {
+            alert('Erro ao atualizar, entre em contato com o suporte.');
+        });
   }
 
 }
