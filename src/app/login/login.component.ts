@@ -49,10 +49,12 @@ export class LoginComponent implements OnInit {
       const loginData = value.filter(function (el) {
         return el.email == getEmailSignIn;
       });
-      const isFirstAccess = loginData[0].firstAccess;
-      isFirstAccess ?
-        this.router.navigateByUrl(`user/${loginData[0].id}`) :
-        this.router.navigateByUrl(`timeline`)
+      if (loginData.length !== 0) {
+        const isFirstAccess = loginData[0].firstAccess;
+        isFirstAccess ?
+          this.router.navigateByUrl(`user/${loginData[0].id}`) :
+          this.router.navigateByUrl(`timeline`)
+      }
 
     });
   }

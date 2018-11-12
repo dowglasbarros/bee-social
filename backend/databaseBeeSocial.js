@@ -24,6 +24,8 @@ class DataBaseMongoDb {
     Mongoose
       .connect('mongodb://felipe:QWERTY1@ds031088.mlab.com:31088/beesocial', { useNewUrlParser: true })
 
+
+
     const connection = Mongoose.connection
     connection.once('open', () => console.log('MongoDB Ativo!!'))
 
